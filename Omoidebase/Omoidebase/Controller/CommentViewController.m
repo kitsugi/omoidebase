@@ -14,38 +14,63 @@
 
 @implementation CommentViewController
 
-
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+  [super viewDidLoad];
   
-  NSString *path = [[NSBundle mainBundle] pathForResource:@"settings" ofType:@"plist"];
-  NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
-  NSString *web = [dict valueForKeyPath:@"web"];
+  self.title = self.place.name;
 
-  web = [NSString stringWithFormat:web, self.area.code];
-  NSLog(@"URL=%@", web);
-  NSURL *url = [NSURL URLWithString:web];
+  NSError *error = nil;
+  CBLQuery *query = [Comment findByPlace:self.place.code error:&error];
 
-  //self.web.scalesPageToFit = YES;
-  NSURLRequest *req = [NSURLRequest requestWithURL:url];
-  [self.web loadRequest:req];
-  
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+  if (_dataSource) {
+    _dataSource.query = query.asLiveQuery;
+    _dataSource.query.descending = NO;
+    _dataSource.tableView = self.tableView;
+  }
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 #pragma mark - Table view data source
+- (void)couchTableSource:(CBLUITableSource*)source
+         updateFromQuery:(CBLLiveQuery*)query
+            previousRows:(NSArray *)previousRows
+{
+  [self.tableView reloadData];
+}
 
+- (UITableViewCell *) couchTableSource:(CBLUITableSource *)source
+                 cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  CommentCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+  
+  CBLQueryRow *queryRow =  [source rowAtIndex:indexPath.row];
+  Comment *comment = [Comment modelForDocument:queryRow.document];
 
+  NSDateFormatter *formatter  = [[NSDateFormatter alloc] init];
+  [formatter setDateFormat:@"MMM dd, yyyy HH:mm"];
+  formatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
+  cell.created_at.text = [formatter stringFromDate:comment.created_at];
+  
+  cell.contents.text = comment.contents;
 
+  if (comment.image) {
+    NSData *data = [[NSData alloc] initWithBase64EncodedString:comment.image options:NSDataBase64DecodingIgnoreUnknownCharacters];
+    if (data) {
+      UIImage *img = [[UIImage alloc] initWithData:data];
+      [cell.image setImage:img];
+    }
+  }
+
+  return cell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+  if ([[segue identifier] isEqualToString:@"entry"]) {
+    UINavigationController *navi = [segue destinationViewController];
+    EntryViewController *ctrl = [navi.viewControllers objectAtIndex:0];
+    ctrl.place = self.place;
+  }
+}
 @end

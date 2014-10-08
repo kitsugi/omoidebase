@@ -4,16 +4,11 @@
 //
 
 
-#import "AreaViewController.h"
+#import "PlaceViewController.h"
 #import "DetailViewController.h"
-#import "AreaCell.h"
+#import "PlaceCell.h"
 
-@interface AreaViewController () {
-    NSMutableArray *_objects;
-}
-@end
-
-@implementation AreaViewController
+@implementation PlaceViewController
 
 - (void)awakeFromNib
 {
@@ -26,15 +21,15 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+  [super viewDidLoad];
+
+  UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
+  barButton.title = @"Back";
+  self.navigationItem.backBarButtonItem = barButton;
 
   
   NSError *error = nil;
-  CBLQuery *query = [Area findAreas:&error];
-
-  CBLQueryEnumerator *rows = [query run:&error];
-  int cnt = rows.count;
-  NSLog(@"Area=%d", cnt);
+  CBLQuery *query = [Place findAll:&error];
 
   if (_dataSource) {
     _dataSource.query = query.asLiveQuery;
@@ -43,44 +38,16 @@
   }
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)insertNewObject:(id)sender
-{
-    if (!_objects) {
-        _objects = [[NSMutableArray alloc] init];
-    }
-    [_objects insertObject:[NSDate date] atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-}
-
-
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
   CBLQueryRow *row = [self.dataSource rowAtIndex:indexPath.row];
-  Area *area = [Area modelForDocument: row.document];
+  Place *place = [Place modelForDocument: row.document];
 
   CommentViewController *ctrl = [self.storyboard instantiateViewControllerWithIdentifier:@"comment"];
-  ctrl.area = area;
+  ctrl.place = place;
   
   // 画面遷移
   [self.navigationController pushViewController:ctrl animated:YES];
-}
-
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = _objects[indexPath.row];
-        [[segue destinationViewController] setDetailItem:object];
-    }
 }
 
 /*
@@ -93,9 +60,9 @@
   sheet.delegate = self;
   sheet.cancelButtonIndex = 2;
   
-  [sheet addButtonWithTitle:@"カメラから取得"];
-  [sheet addButtonWithTitle:@"写真ライブラリから取得"];
-  [sheet addButtonWithTitle:@"キャンセル"];
+  [sheet addButtonWithTitle:@"Take Photo"];
+  [sheet addButtonWithTitle:@"Choose Photo"];
+  [sheet addButtonWithTitle:@"Cancel"];
 
   [sheet showInView:self.view];
 }
@@ -136,7 +103,7 @@
     image = [info objectForKey:UIImagePickerControllerOriginalImage];
   }
   
-  NSString *qrcode = @"a0261b89-3344-4626-b6c9-8232f916d969";
+  NSString *qrcode = @"2C139CE5-9B5D-4836-97A3-B25AEC49D6FB";
   [self setQRcode:qrcode];
   
   // モーダルビューを閉じる
@@ -181,7 +148,7 @@
       return;
     }
     
-    User *user = [User findUser:uid error:&error];
+    Profile *user = [Profile find:uid error:&error];
     if (user) {
       NSMutableArray *items = [NSMutableArray arrayWithArray:user.places];
       [items addObject:qrcode];
@@ -194,12 +161,6 @@
   } else {
     self.qrcode = @"";
   }
-/*
-  UIAlertView *alert =
-  [[UIAlertView alloc] initWithTitle:@"debug" message:qrcode
-                            delegate:self cancelButtonTitle:@"確認" otherButtonTitles:nil];
-  [alert show];
- */
 }
 
 
@@ -213,12 +174,13 @@
 - (UITableViewCell *) couchTableSource:(CBLUITableSource *)source
                  cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  AreaCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+  PlaceCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
   
   CBLQueryRow *queryRow =  [source rowAtIndex:indexPath.row];
-  Area *area = [Area modelForDocument:queryRow.document];
+  Place *area = [Place modelForDocument:queryRow.document];
   
   cell.name.text = area.name;
+  cell.remark.text = area.remark;
   
   NSData *data = [[NSData alloc] initWithBase64EncodedString:area.image options:NSDataBase64DecodingIgnoreUnknownCharacters];
   if (data) {

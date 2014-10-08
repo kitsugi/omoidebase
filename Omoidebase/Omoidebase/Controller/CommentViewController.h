@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Couchbaselite/CBLUITableSource.h>
-#import "Area.h"
+#import "Place.h"
 
-@interface CommentViewController : UIViewController
+@interface CommentViewController : UITableViewController
   <CBLUITableDelegate>
 
-@property (nonatomic) IBOutlet CBLUITableSource* dataSource;
+@property (nonatomic) Place *place;
 
-@property (nonatomic) Area *area;
-@property (weak, nonatomic) IBOutlet UIWebView *web;
+@property (nonatomic) IBOutlet CBLUITableSource* dataSource;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end

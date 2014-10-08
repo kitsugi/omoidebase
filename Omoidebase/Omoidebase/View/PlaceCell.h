@@ -1,5 +1,5 @@
 //
-//  AreaCell.h
+//  PlaceCell.h
 //  Omoidebase
 //
 //  Created by Couchmemories on 2014/09/07.
@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AreaCell : UITableViewCell
+@interface PlaceCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *name;
+@property (weak, nonatomic) IBOutlet UILabel *remark;
 @property (weak, nonatomic) IBOutlet UIImageView *image;
-
 
 @end

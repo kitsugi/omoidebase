@@ -19,12 +19,17 @@
 #import "SettingsViewController.h"
 #import "QRCaptureViewController.h"
 #import "CommentViewController.h"
+#import "EntryViewController.h"
 #import "QRAuthDelegate.h"
+
 #import "DBManager.h"
 #import "CBLModel+DB.h"
 #import "Document.h"
-#import "User.h"
-#import "Area.h"
-#import "AreaCell.h"
+#import "Profile.h"
+#import "Place.h"
+#import "Master.h"
+#import "Comment.h"
 
+#import "PlaceCell.h"
+#import "CommentCell.h"
 #endif

@@ -71,14 +71,10 @@ __strong static DBManager* sharedInstance = nil;
   }
   [Document setDatabase:self.database];
   
-  int cnt = self.database.documentCount;
-  NSLog(@"Document=%d", cnt);
-
   [self startSync:YES];
 
   return YES;
 }
-
 
 /**
  * ログアウトします。
@@ -90,6 +86,14 @@ __strong static DBManager* sharedInstance = nil;
   self.database = nil;
   [Document setDatabase:nil];
   [self stopSync];
+}
+
+-(void)clean
+{
+  NSError *error = nil;
+  CBLManager *mgr = [CBLManager sharedInstance];
+  self.database = [mgr databaseNamed:@"omoide" error:&error];
+  [self.database deleteDatabase:&error];
 }
 
 /**

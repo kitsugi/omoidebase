@@ -2,11 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>web</key>
-	<string>http://54.64.39.70/omoidebase/%@.html</string>
-	<key>user</key>
-	<string>test</string>
 	<key>url</key>
-	<string>http://%@:%@@54.64.39.70:4984/omoidebase</string>
+	<string>http://%@:%@@localhost:4984/omoidebase</string>
 </dict>
 </plist>

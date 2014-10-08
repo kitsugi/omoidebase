@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0139B38219E3ED5E00DBBCE1 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 0139B38119E3ED5E00DBBCE1 /* Comment.m */; };
+		0139B38519E3EDC400DBBCE1 /* Master.m in Sources */ = {isa = PBXBuildFile; fileRef = 0139B38419E3EDC400DBBCE1 /* Master.m */; };
+		0139B38919E3FA2500DBBCE1 /* CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0139B38819E3FA2500DBBCE1 /* CommentCell.m */; };
+		0139B38C19E4017500DBBCE1 /* EntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0139B38B19E4017500DBBCE1 /* EntryViewController.m */; };
 		0198B1E419BC056F000FD4C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0198B1E319BC056F000FD4C7 /* Foundation.framework */; };
 		0198B1E619BC056F000FD4C7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0198B1E519BC056F000FD4C7 /* CoreGraphics.framework */; };
 		0198B1E819BC056F000FD4C7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0198B1E719BC056F000FD4C7 /* UIKit.framework */; };
@@ -21,14 +25,13 @@
 		0198B20B19BC0570000FD4C7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0198B1E719BC056F000FD4C7 /* UIKit.framework */; };
 		0198B21319BC0570000FD4C7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0198B21119BC0570000FD4C7 /* InfoPlist.strings */; };
 		0198B21519BC0570000FD4C7 /* OmoidebaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0198B21419BC0570000FD4C7 /* OmoidebaseTests.m */; };
-		0198B21F19BC0651000FD4C7 /* CouchbaseLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0198B21E19BC0651000FD4C7 /* CouchbaseLite.framework */; };
-		0198B22719BC06D9000FD4C7 /* AreaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0198B22319BC06D9000FD4C7 /* AreaViewController.m */; };
+		0198B22719BC06D9000FD4C7 /* PlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0198B22319BC06D9000FD4C7 /* PlaceViewController.m */; };
 		0198B22819BC06D9000FD4C7 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0198B22519BC06D9000FD4C7 /* DetailViewController.m */; };
 		0198B22B19BC0CD3000FD4C7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0198B22A19BC0CD3000FD4C7 /* AVFoundation.framework */; };
 		0198B22E19BC0E5C000FD4C7 /* QRCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0198B22D19BC0E5C000FD4C7 /* QRCaptureViewController.m */; };
-		0198B23219BC19D1000FD4C7 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 0198B23119BC19D1000FD4C7 /* User.m */; };
+		0198B23219BC19D1000FD4C7 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 0198B23119BC19D1000FD4C7 /* Profile.m */; };
 		0198B23519BC1A41000FD4C7 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0198B23319BC1A41000FD4C7 /* DBManager.m */; };
-		0198B23819BC1DF6000FD4C7 /* Area.m in Sources */ = {isa = PBXBuildFile; fileRef = 0198B23719BC1DF6000FD4C7 /* Area.m */; };
+		0198B23819BC1DF6000FD4C7 /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = 0198B23719BC1DF6000FD4C7 /* Place.m */; };
 		0198B23B19BC1F3B000FD4C7 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = 0198B23A19BC1F3B000FD4C7 /* Document.m */; };
 		0198B23D19BC20BF000FD4C7 /* settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0198B23C19BC20BF000FD4C7 /* settings.plist */; };
 		0198B24019BC2180000FD4C7 /* CBLModel+DB.m in Sources */ = {isa = PBXBuildFile; fileRef = 0198B23E19BC2180000FD4C7 /* CBLModel+DB.m */; };
@@ -38,8 +41,9 @@
 		0198B24A19BC2879000FD4C7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0198B24919BC2879000FD4C7 /* SystemConfiguration.framework */; };
 		0198B24C19BC288E000FD4C7 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0198B24B19BC288E000FD4C7 /* libsqlite3.dylib */; };
 		0198B24E19BC2896000FD4C7 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0198B24D19BC2896000FD4C7 /* libz.dylib */; };
-		01E7844719BC4299002E9884 /* AreaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E7844619BC4299002E9884 /* AreaCell.m */; };
+		01E7844719BC4299002E9884 /* PlaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E7844619BC4299002E9884 /* PlaceCell.m */; };
 		01E7844B19BC4533002E9884 /* CommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E7844A19BC4533002E9884 /* CommentViewController.m */; };
+		01E7845119BC5B6D002E9884 /* CouchbaseLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E7844F19BC5B5E002E9884 /* CouchbaseLite.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0139B38019E3ED5E00DBBCE1 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Comment.h; path = Model/Comment.h; sourceTree = "<group>"; };
+		0139B38119E3ED5E00DBBCE1 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Comment.m; path = Model/Comment.m; sourceTree = "<group>"; };
+		0139B38319E3EDC400DBBCE1 /* Master.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Master.h; path = Model/Master.h; sourceTree = "<group>"; };
+		0139B38419E3EDC400DBBCE1 /* Master.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Master.m; path = Model/Master.m; sourceTree = "<group>"; };
+		0139B38719E3FA2500DBBCE1 /* CommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommentCell.h; path = View/CommentCell.h; sourceTree = "<group>"; };
+		0139B38819E3FA2500DBBCE1 /* CommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommentCell.m; path = View/CommentCell.m; sourceTree = "<group>"; };
+		0139B38A19E4017500DBBCE1 /* EntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EntryViewController.h; path = Controller/EntryViewController.h; sourceTree = "<group>"; };
+		0139B38B19E4017500DBBCE1 /* EntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EntryViewController.m; path = Controller/EntryViewController.m; sourceTree = "<group>"; };
 		0198B1E019BC056F000FD4C7 /* Omoidebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Omoidebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0198B1E319BC056F000FD4C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0198B1E519BC056F000FD4C7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -72,20 +84,20 @@
 		0198B21219BC0570000FD4C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0198B21419BC0570000FD4C7 /* OmoidebaseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OmoidebaseTests.m; sourceTree = "<group>"; };
 		0198B21E19BC0651000FD4C7 /* CouchbaseLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CouchbaseLite.framework; sourceTree = "<group>"; };
-		0198B22319BC06D9000FD4C7 /* AreaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AreaViewController.m; path = Controller/AreaViewController.m; sourceTree = "<group>"; };
-		0198B22419BC06D9000FD4C7 /* AreaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AreaViewController.h; path = Controller/AreaViewController.h; sourceTree = "<group>"; };
+		0198B22319BC06D9000FD4C7 /* PlaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceViewController.m; path = Controller/PlaceViewController.m; sourceTree = "<group>"; };
+		0198B22419BC06D9000FD4C7 /* PlaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceViewController.h; path = Controller/PlaceViewController.h; sourceTree = "<group>"; };
 		0198B22519BC06D9000FD4C7 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = Controller/DetailViewController.m; sourceTree = "<group>"; };
 		0198B22619BC06D9000FD4C7 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = Controller/DetailViewController.h; sourceTree = "<group>"; };
 		0198B22A19BC0CD3000FD4C7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0198B22C19BC0E5C000FD4C7 /* QRCaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QRCaptureViewController.h; path = Controller/QRCaptureViewController.h; sourceTree = "<group>"; };
 		0198B22D19BC0E5C000FD4C7 /* QRCaptureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QRCaptureViewController.m; path = Controller/QRCaptureViewController.m; sourceTree = "<group>"; };
 		0198B22F19BC115F000FD4C7 /* QRAuthDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = QRAuthDelegate.h; path = Controller/QRAuthDelegate.h; sourceTree = "<group>"; };
-		0198B23019BC19D1000FD4C7 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Model/User.h; sourceTree = "<group>"; };
-		0198B23119BC19D1000FD4C7 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Model/User.m; sourceTree = "<group>"; };
+		0198B23019BC19D1000FD4C7 /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Profile.h; path = Model/Profile.h; sourceTree = "<group>"; };
+		0198B23119BC19D1000FD4C7 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Profile.m; path = Model/Profile.m; sourceTree = "<group>"; };
 		0198B23319BC1A41000FD4C7 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBManager.m; path = Model/DBManager.m; sourceTree = "<group>"; };
 		0198B23419BC1A41000FD4C7 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBManager.h; path = Model/DBManager.h; sourceTree = "<group>"; };
-		0198B23619BC1DF6000FD4C7 /* Area.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Area.h; path = Model/Area.h; sourceTree = "<group>"; };
-		0198B23719BC1DF6000FD4C7 /* Area.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Area.m; path = Model/Area.m; sourceTree = "<group>"; };
+		0198B23619BC1DF6000FD4C7 /* Place.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Place.h; path = Model/Place.h; sourceTree = "<group>"; };
+		0198B23719BC1DF6000FD4C7 /* Place.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Place.m; path = Model/Place.m; sourceTree = "<group>"; };
 		0198B23919BC1F3B000FD4C7 /* Document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Document.h; path = Model/Document.h; sourceTree = "<group>"; };
 		0198B23A19BC1F3B000FD4C7 /* Document.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Document.m; path = Model/Document.m; sourceTree = "<group>"; };
 		0198B23C19BC20BF000FD4C7 /* settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = settings.plist; sourceTree = "<group>"; };
@@ -99,10 +111,11 @@
 		0198B24919BC2879000FD4C7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		0198B24B19BC288E000FD4C7 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		0198B24D19BC2896000FD4C7 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		01E7844519BC4299002E9884 /* AreaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AreaCell.h; path = View/AreaCell.h; sourceTree = "<group>"; };
-		01E7844619BC4299002E9884 /* AreaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AreaCell.m; path = View/AreaCell.m; sourceTree = "<group>"; };
+		01E7844519BC4299002E9884 /* PlaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceCell.h; path = View/PlaceCell.h; sourceTree = "<group>"; };
+		01E7844619BC4299002E9884 /* PlaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceCell.m; path = View/PlaceCell.m; sourceTree = "<group>"; };
 		01E7844919BC4533002E9884 /* CommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommentViewController.h; path = Controller/CommentViewController.h; sourceTree = "<group>"; };
 		01E7844A19BC4533002E9884 /* CommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommentViewController.m; path = Controller/CommentViewController.m; sourceTree = "<group>"; };
+		01E7844F19BC5B5E002E9884 /* CouchbaseLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CouchbaseLite.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01E7845119BC5B6D002E9884 /* CouchbaseLite.framework in Frameworks */,
 				0198B24E19BC2896000FD4C7 /* libz.dylib in Frameworks */,
 				0198B24C19BC288E000FD4C7 /* libsqlite3.dylib in Frameworks */,
 				0198B24A19BC2879000FD4C7 /* SystemConfiguration.framework in Frameworks */,
@@ -118,7 +132,6 @@
 				0198B22B19BC0CD3000FD4C7 /* AVFoundation.framework in Frameworks */,
 				0198B1E619BC056F000FD4C7 /* CoreGraphics.framework in Frameworks */,
 				0198B1E819BC056F000FD4C7 /* UIKit.framework in Frameworks */,
-				0198B21F19BC0651000FD4C7 /* CouchbaseLite.framework in Frameworks */,
 				0198B1E419BC056F000FD4C7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,6 +171,7 @@
 		0198B1E219BC056F000FD4C7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				01E7844F19BC5B5E002E9884 /* CouchbaseLite.framework */,
 				0198B24D19BC2896000FD4C7 /* libz.dylib */,
 				0198B24B19BC288E000FD4C7 /* libsqlite3.dylib */,
 				0198B24919BC2879000FD4C7 /* SystemConfiguration.framework */,
@@ -222,8 +236,8 @@
 		0198B22019BC0693000FD4C7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0198B22319BC06D9000FD4C7 /* AreaViewController.m */,
-				0198B22419BC06D9000FD4C7 /* AreaViewController.h */,
+				0198B22319BC06D9000FD4C7 /* PlaceViewController.m */,
+				0198B22419BC06D9000FD4C7 /* PlaceViewController.h */,
 				0198B22519BC06D9000FD4C7 /* DetailViewController.m */,
 				0198B22619BC06D9000FD4C7 /* DetailViewController.h */,
 				0198B22C19BC0E5C000FD4C7 /* QRCaptureViewController.h */,
@@ -233,6 +247,8 @@
 				0198B24319BC271D000FD4C7 /* SettingsViewController.m */,
 				01E7844919BC4533002E9884 /* CommentViewController.h */,
 				01E7844A19BC4533002E9884 /* CommentViewController.m */,
+				0139B38A19E4017500DBBCE1 /* EntryViewController.h */,
+				0139B38B19E4017500DBBCE1 /* EntryViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -245,12 +261,16 @@
 				0198B23F19BC2180000FD4C7 /* CBLModel+DB.h */,
 				0198B23319BC1A41000FD4C7 /* DBManager.m */,
 				0198B23419BC1A41000FD4C7 /* DBManager.h */,
-				0198B23019BC19D1000FD4C7 /* User.h */,
-				0198B23119BC19D1000FD4C7 /* User.m */,
-				0198B23619BC1DF6000FD4C7 /* Area.h */,
-				0198B23719BC1DF6000FD4C7 /* Area.m */,
+				0139B38019E3ED5E00DBBCE1 /* Comment.h */,
+				0139B38119E3ED5E00DBBCE1 /* Comment.m */,
 				0198B23919BC1F3B000FD4C7 /* Document.h */,
 				0198B23A19BC1F3B000FD4C7 /* Document.m */,
+				0139B38319E3EDC400DBBCE1 /* Master.h */,
+				0139B38419E3EDC400DBBCE1 /* Master.m */,
+				0198B23019BC19D1000FD4C7 /* Profile.h */,
+				0198B23119BC19D1000FD4C7 /* Profile.m */,
+				0198B23619BC1DF6000FD4C7 /* Place.h */,
+				0198B23719BC1DF6000FD4C7 /* Place.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -258,8 +278,10 @@
 		0198B22219BC069F000FD4C7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				01E7844519BC4299002E9884 /* AreaCell.h */,
-				01E7844619BC4299002E9884 /* AreaCell.m */,
+				01E7844519BC4299002E9884 /* PlaceCell.h */,
+				01E7844619BC4299002E9884 /* PlaceCell.m */,
+				0139B38719E3FA2500DBBCE1 /* CommentCell.h */,
+				0139B38819E3FA2500DBBCE1 /* CommentCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -365,13 +387,17 @@
 			files = (
 				0198B23B19BC1F3B000FD4C7 /* Document.m in Sources */,
 				0198B23519BC1A41000FD4C7 /* DBManager.m in Sources */,
-				0198B23219BC19D1000FD4C7 /* User.m in Sources */,
-				0198B23819BC1DF6000FD4C7 /* Area.m in Sources */,
+				0198B23219BC19D1000FD4C7 /* Profile.m in Sources */,
+				0198B23819BC1DF6000FD4C7 /* Place.m in Sources */,
+				0139B38519E3EDC400DBBCE1 /* Master.m in Sources */,
 				01E7844B19BC4533002E9884 /* CommentViewController.m in Sources */,
 				0198B1F419BC0570000FD4C7 /* AppDelegate.m in Sources */,
 				0198B24019BC2180000FD4C7 /* CBLModel+DB.m in Sources */,
-				01E7844719BC4299002E9884 /* AreaCell.m in Sources */,
-				0198B22719BC06D9000FD4C7 /* AreaViewController.m in Sources */,
+				0139B38219E3ED5E00DBBCE1 /* Comment.m in Sources */,
+				01E7844719BC4299002E9884 /* PlaceCell.m in Sources */,
+				0139B38C19E4017500DBBCE1 /* EntryViewController.m in Sources */,
+				0198B22719BC06D9000FD4C7 /* PlaceViewController.m in Sources */,
+				0139B38919E3FA2500DBBCE1 /* CommentCell.m in Sources */,
 				0198B22E19BC0E5C000FD4C7 /* QRCaptureViewController.m in Sources */,
 				0198B24419BC271D000FD4C7 /* SettingsViewController.m in Sources */,
 				0198B1F019BC056F000FD4C7 /* main.m in Sources */,

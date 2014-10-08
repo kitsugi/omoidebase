@@ -13,14 +13,4 @@
  */
 @property (copy) NSString *type;
 
-/**
- * コード
- */
-@property NSString *code;
-
-/**
- * 名称
- */
-@property NSString *name;
-
 @end

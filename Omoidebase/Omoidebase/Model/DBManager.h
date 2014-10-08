@@ -16,8 +16,6 @@
 
 // Properties
 @property (strong, nonatomic) CBLDatabase *database;
-//@property (strong, nonatomic) User *user;
-
 @property (nonatomic, strong) CBLReplication *pull;
 @property (nonatomic, strong) CBLReplication *push;
 

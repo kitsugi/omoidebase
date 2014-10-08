@@ -1,12 +1,12 @@
 //
-//  Area.m
+//  Profile.m
 //  Omoidebase
 //
 
 
-#import "User.h"
+#import "Profile.h"
 
-@implementation User
+@implementation Profile
 
 @dynamic places;
 
@@ -17,7 +17,7 @@
  * @param outError  エラー情報
  * @return  ユーザー情報
  */
-+ (User *)findUser:(NSString *)code error:(NSError **)outError
++ (Profile *)find:(NSString *)code error:(NSError **)outError
 {
   NSParameterAssert(self.database);
   
@@ -29,7 +29,7 @@
   }
   if (rows.count > 0) {
     CBLQueryRow *row = [rows rowAtIndex:0];
-    return [User modelForDocument:row.document];
+    return [Profile modelForDocument:row.document];
   }
   
   return nil;
@@ -53,7 +53,7 @@
     if ([USER_TYPE isEqualToString:doc[@"type"]]) {
       emit(doc[@"name"], doc);
     }
-  }) version: @"1.1"];
+  }) version: @"1.0"];
   
   return view;
 }

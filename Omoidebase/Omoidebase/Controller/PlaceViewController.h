@@ -9,7 +9,7 @@
 
 @class CommentViewController;
 
-@interface AreaViewController : UITableViewController
+@interface PlaceViewController : UITableViewController
   <UIActionSheetDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, QRAuthDelegate, CBLUITableDelegate>
 
 - (IBAction)actionTappedQR:(id)sender;

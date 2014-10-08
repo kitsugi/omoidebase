@@ -1,24 +1,25 @@
 //
-//  Area.m
+//  Place.m
 //  Omoidebase
 //
 
 
-#import "Area.h"
+#import "Place.h"
 
-@implementation Area
+@implementation Place
 
+@dynamic remark;
 @dynamic image;
 
 #pragma mark -
 #pragma mark Class Methods
 /**
- * ユーザー一覧を取得します。
+ * 場所一覧を取得します。
  *
  * @param outError  エラー情報
- * @return  ユーザー一覧
+ * @return  場所一覧
  */
-+ (CBLQuery *)findAreas:(NSError **)outError
++ (CBLQuery *)findAll:(NSError **)outError
 {
   NSParameterAssert(self.database);
   
@@ -43,7 +44,7 @@
     if ([AREA_TYPE isEqualToString:doc[@"type"]]) {
       emit(doc[@"code"], doc);
     }
-  }) version: @"1.1"];
+  }) version: @"1.0"];
   
   return view;
 }

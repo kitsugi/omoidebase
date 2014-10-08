@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface SettingsViewController : UIViewController
+  <UITextFieldDelegate>
 - (IBAction)actionTappedDone:(id)sender;
 - (IBAction)actionTappedCancel:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *user;

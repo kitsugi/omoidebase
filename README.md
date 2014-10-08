@@ -23,22 +23,32 @@ You can start SyncGateway specifying this file:
 
 There are some 'place' documents under sync-gateway/places. You can add these document by:
 
-    curl -XPUT -H "Content-Type: application/json" -d @ryokan.json http://localhost:4985/omoidebase/E3F58FBF-6C5F-4410-AAA2-F5C666DFE958
+  curl -XPUT  -H "Content-Type: application/json" http://localhost:4985/omoidebase/ADAA8D9E-26C4-46F8-9A39-78EFD6DDC3F5 -d @place1.json
+  curl -XPUT  -H "Content-Type: application/json" http://localhost:4985/omoidebase/2C139CE5-9B5D-4836-97A3-B25AEC49D6FB -d @place2.json
+  curl -XPUT  -H "Content-Type: application/json" http://localhost:4985/omoidebase/89B038CD-84A9-442c-95D1-0E22CAF8EB9E -d @place3.json
 
 You will also need to register some users to play with:
 
 - User for SyncGateway authentication:
 
-    curl -XPOST -H "Content-Type: application/json" -d '{
-      "name" : "username",
-      "password" : "password"}' http://localhost:4985/omoidebase/_user/
+  curl -XPOST -H "Content-Type: application/json" http://localhost:4985/omoidebase/_user/ -d @user1.json
+  curl -XPOST -H "Content-Type: application/json" http://localhost:4985/omoidebase/_user/ -d @user2.json
 
 - And additional profile document to manage channels of this user:
 
-    curl -XPUT -H "Content-Type: application/json" -d '{
-      "name" : "username",
-      "places" : ["place-id"],
-      "type" : "profile"
-    }' http://localhost:4985/omoidebase/username
+  curl -XPUT -H "Content-Type: application/json" http://localhost:4985/omoidebase/tom -d @profile1.json
+  curl -XPUT -H "Content-Type: application/json" http://localhost:4985/omoidebase/jerry -d @profile2.json
+
+Xcode
+=====
+Copy CouchbaseLite.framework into the Frameworks directory.
+If you need to change the SyncGateway IP address, you change the configuration settings.
+(settings.plist)
 
 If everything has been set properly, you can login from the iOS app and start syncing.
+
+Event
+============
+Sept 7th, 2014  Hackathon in Tokyo
+Oct  7th, 2014  Couchbase Connect in San Francisco
+

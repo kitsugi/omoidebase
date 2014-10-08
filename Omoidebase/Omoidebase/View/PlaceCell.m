@@ -1,14 +1,14 @@
 //
-//  AreaCell.m
+//  PlaceCell.m
 //  Omoidebase
 //
 //  Created by Couchmemories on 2014/09/07.
 //  Copyright (c) 2014年 Ajinosashimi. All rights reserved.
 //
 
-#import "AreaCell.h"
+#import "PlaceCell.h"
 
-@implementation AreaCell
+@implementation PlaceCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
