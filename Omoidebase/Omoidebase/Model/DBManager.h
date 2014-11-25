@@ -55,7 +55,7 @@
 // Instance Methods
 -(BOOL)start:(NSError **)outError;
 -(void)stop;
-
+-(void)clean;
 
 - (void)startSync:(BOOL)continuous;
 - (void)stopSync;

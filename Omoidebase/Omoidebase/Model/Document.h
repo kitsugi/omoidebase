@@ -11,6 +11,6 @@
 /**
  * ドキュメント種別
  */
-@property (copy) NSString *type;
+//@property (copy) NSString *type;
 
 @end

@@ -3,6 +3,6 @@
 <plist version="1.0">
 <dict>
 	<key>url</key>
-	<string>http://%@:%@@localhost:4984/omoidebase</string>
+	<string>http://%@:%@@192.168.3.3:4984/omoidebase</string>
 </dict>
 </plist>

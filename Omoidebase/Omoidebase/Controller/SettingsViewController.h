@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SettingsDelegate.h"
 
 @interface SettingsViewController : UIViewController
   <UITextFieldDelegate>
@@ -14,5 +15,6 @@
 - (IBAction)actionTappedCancel:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *user;
 @property (weak, nonatomic) IBOutlet UITextField *password;
+@property (strong, nonatomic) id<SettingsDelegate> delegate;
 
 @end

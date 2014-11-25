@@ -51,4 +51,5 @@ Event
 ============
 Sept 7th, 2014  Hackathon in Tokyo  
 Oct  7th, 2014  Couchbase Connect in San Francisco  
+Nov 19th, 2014  Couchbase MeetUP Tokyo - #11  
 

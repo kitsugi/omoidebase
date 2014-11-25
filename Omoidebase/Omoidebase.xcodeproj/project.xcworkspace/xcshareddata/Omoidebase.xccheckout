@@ -10,31 +10,31 @@
 	<string>Omoidebase</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>6C46B416E21AAC3445A2C5A1C20AE6B94EB20CE3</key>
-		<string>file:///Users/kitsugi/Dropbox/zig-touch.git/</string>
+		<key>9E1D3F6F19876E4BB43474A550637DBD1D213337</key>
+		<string>https://github.com/kitsugi/omoidebase.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>app/Omoidebase/Omoidebase.xcodeproj/project.xcworkspace</string>
+	<string>Omoidebase/Omoidebase.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>6C46B416E21AAC3445A2C5A1C20AE6B94EB20CE3</key>
-		<string>../../../..</string>
+		<key>9E1D3F6F19876E4BB43474A550637DBD1D213337</key>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>file:///Users/kitsugi/Dropbox/zig-touch.git/</string>
+	<string>https://github.com/kitsugi/omoidebase.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>6C46B416E21AAC3445A2C5A1C20AE6B94EB20CE3</string>
+	<string>9E1D3F6F19876E4BB43474A550637DBD1D213337</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>6C46B416E21AAC3445A2C5A1C20AE6B94EB20CE3</string>
+			<string>9E1D3F6F19876E4BB43474A550637DBD1D213337</string>
 			<key>IDESourceControlWCCName</key>
-			<string>local</string>
+			<string>omoidebase</string>
 		</dict>
 	</array>
 </dict>

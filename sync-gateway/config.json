@@ -8,18 +8,18 @@
     "omoidebase": {
       "server": "http://localhost:8091",
       "bucket": "omoidebase",
-      "sync": ` function(doc) {
-        if(doc.type === "profile"){
+      "sync": ` function(doc, oldDoc) {
+        if (doc.type === "profile") {
           if(doc.places){
-           for(var i = 0; i < doc.places.length; i++){
+           for (var i = 0; i < doc.places.length; i++) {
              access(doc.name, doc.places[i]);
             }
           }
           access(doc.name, doc.name);
           channel(doc.name);
-        } else if(doc.type === "comment"){
+        } else if (doc.type === "comment") {
           channel(doc.place);
-        } else if(doc.type === "place"){
+        } else if (doc.type === "place") {
           channel(doc._id);
         }
       }`

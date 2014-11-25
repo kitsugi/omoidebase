@@ -62,11 +62,10 @@
   
   [userDefaults synchronize];
 
-  NSError *error = nil;
-  DBManager *mgr = [DBManager sharedManager];
-  [mgr stop];
-  [mgr start:&error];
-
+  if (self.delegate) {
+    [self.delegate change];
+  }
+  
   // モーダルビューを閉じる
   [self dismissViewControllerAnimated:YES completion:nil];
 }

@@ -67,6 +67,14 @@
   [sheet showInView:self.view];
 }
 
+- (IBAction)actionTappedSettings:(id)sender
+{
+  SettingsViewController *ctrl = [self.storyboard instantiateViewControllerWithIdentifier:@"settings"];
+  ctrl.delegate = self;
+  UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:ctrl];
+  [self presentViewController:navi animated:YES completion: nil];
+}
+
 /**
  * アクションシートのボタンがタップされた時のデリゲートメソッドです。
  *
@@ -163,6 +171,24 @@
   }
 }
 
+-(void)change
+{
+  [self.tableView reloadData];
+
+  NSError *error = nil;
+  DBManager *mgr = [DBManager sharedManager];
+  [mgr stop];
+  [mgr clean];
+  [mgr start:&error];
+  
+  CBLQuery *query = [Place findAll:&error];
+  
+  if (_dataSource) {
+    _dataSource.query = query.asLiveQuery;
+    _dataSource.query.descending = NO;
+    _dataSource.tableView = self.tableView;
+  }
+}
 
 - (void)couchTableSource:(CBLUITableSource*)source
          updateFromQuery:(CBLLiveQuery*)query

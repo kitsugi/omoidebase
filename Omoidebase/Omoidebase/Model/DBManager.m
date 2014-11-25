@@ -1,6 +1,8 @@
 
 
 #import "DBManager.h"
+#import "Document.h"
+#import <CouchbaseLite/CouchbaseLite.h>
 
 //###########################################################################
 /// データベース管理クラス

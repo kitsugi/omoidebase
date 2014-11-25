@@ -1,6 +1,7 @@
 
 
 #import "CBLModel+DB.h"
+#import <CouchbaseLite/CouchbaseLite.h>
 
 static CBLDatabase *g_database;
 

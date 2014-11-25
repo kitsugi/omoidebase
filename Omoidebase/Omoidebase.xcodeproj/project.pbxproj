@@ -41,9 +41,9 @@
 		0198B24A19BC2879000FD4C7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0198B24919BC2879000FD4C7 /* SystemConfiguration.framework */; };
 		0198B24C19BC288E000FD4C7 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0198B24B19BC288E000FD4C7 /* libsqlite3.dylib */; };
 		0198B24E19BC2896000FD4C7 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0198B24D19BC2896000FD4C7 /* libz.dylib */; };
+		01E608E91A1B1688009FFC77 /* CouchbaseLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E608E71A1B15EE009FFC77 /* CouchbaseLite.framework */; };
 		01E7844719BC4299002E9884 /* PlaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E7844619BC4299002E9884 /* PlaceCell.m */; };
 		01E7844B19BC4533002E9884 /* CommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E7844A19BC4533002E9884 /* CommentViewController.m */; };
-		01E7845119BC5B6D002E9884 /* CouchbaseLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E7844F19BC5B5E002E9884 /* CouchbaseLite.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +83,6 @@
 		0198B21019BC0570000FD4C7 /* OmoidebaseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OmoidebaseTests-Info.plist"; sourceTree = "<group>"; };
 		0198B21219BC0570000FD4C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0198B21419BC0570000FD4C7 /* OmoidebaseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OmoidebaseTests.m; sourceTree = "<group>"; };
-		0198B21E19BC0651000FD4C7 /* CouchbaseLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CouchbaseLite.framework; sourceTree = "<group>"; };
 		0198B22319BC06D9000FD4C7 /* PlaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceViewController.m; path = Controller/PlaceViewController.m; sourceTree = "<group>"; };
 		0198B22419BC06D9000FD4C7 /* PlaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceViewController.h; path = Controller/PlaceViewController.h; sourceTree = "<group>"; };
 		0198B22519BC06D9000FD4C7 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = Controller/DetailViewController.m; sourceTree = "<group>"; };
@@ -111,11 +110,12 @@
 		0198B24919BC2879000FD4C7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		0198B24B19BC288E000FD4C7 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		0198B24D19BC2896000FD4C7 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		01A55EB81A1C7A8C00D1B0DC /* SettingsDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SettingsDelegate.h; path = Controller/SettingsDelegate.h; sourceTree = "<group>"; };
+		01E608E71A1B15EE009FFC77 /* CouchbaseLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CouchbaseLite.framework; sourceTree = "<group>"; };
 		01E7844519BC4299002E9884 /* PlaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceCell.h; path = View/PlaceCell.h; sourceTree = "<group>"; };
 		01E7844619BC4299002E9884 /* PlaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceCell.m; path = View/PlaceCell.m; sourceTree = "<group>"; };
 		01E7844919BC4533002E9884 /* CommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommentViewController.h; path = Controller/CommentViewController.h; sourceTree = "<group>"; };
 		01E7844A19BC4533002E9884 /* CommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommentViewController.m; path = Controller/CommentViewController.m; sourceTree = "<group>"; };
-		01E7844F19BC5B5E002E9884 /* CouchbaseLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CouchbaseLite.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01E7845119BC5B6D002E9884 /* CouchbaseLite.framework in Frameworks */,
+				01E608E91A1B1688009FFC77 /* CouchbaseLite.framework in Frameworks */,
 				0198B24E19BC2896000FD4C7 /* libz.dylib in Frameworks */,
 				0198B24C19BC288E000FD4C7 /* libsqlite3.dylib in Frameworks */,
 				0198B24A19BC2879000FD4C7 /* SystemConfiguration.framework in Frameworks */,
@@ -171,14 +171,13 @@
 		0198B1E219BC056F000FD4C7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				01E7844F19BC5B5E002E9884 /* CouchbaseLite.framework */,
+				01E608E71A1B15EE009FFC77 /* CouchbaseLite.framework */,
 				0198B24D19BC2896000FD4C7 /* libz.dylib */,
 				0198B24B19BC288E000FD4C7 /* libsqlite3.dylib */,
 				0198B24919BC2879000FD4C7 /* SystemConfiguration.framework */,
 				0198B24719BC2870000FD4C7 /* Security.framework */,
 				0198B24519BC2866000FD4C7 /* CFNetwork.framework */,
 				0198B22A19BC0CD3000FD4C7 /* AVFoundation.framework */,
-				0198B21E19BC0651000FD4C7 /* CouchbaseLite.framework */,
 				0198B1E319BC056F000FD4C7 /* Foundation.framework */,
 				0198B1E519BC056F000FD4C7 /* CoreGraphics.framework */,
 				0198B1E719BC056F000FD4C7 /* UIKit.framework */,
@@ -190,9 +189,9 @@
 		0198B1E919BC056F000FD4C7 /* Omoidebase */ = {
 			isa = PBXGroup;
 			children = (
-				0198B22219BC069F000FD4C7 /* View */,
-				0198B22119BC0698000FD4C7 /* Model */,
 				0198B22019BC0693000FD4C7 /* Controller */,
+				0198B22119BC0698000FD4C7 /* Model */,
+				0198B22219BC069F000FD4C7 /* View */,
 				0198B1F219BC0570000FD4C7 /* AppDelegate.h */,
 				0198B1F319BC0570000FD4C7 /* AppDelegate.m */,
 				0198B1F519BC0570000FD4C7 /* Main_iPhone.storyboard */,
@@ -249,6 +248,7 @@
 				01E7844A19BC4533002E9884 /* CommentViewController.m */,
 				0139B38A19E4017500DBBCE1 /* EntryViewController.h */,
 				0139B38B19E4017500DBBCE1 /* EntryViewController.m */,
+				01A55EB81A1C7A8C00D1B0DC /* SettingsDelegate.h */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -257,8 +257,8 @@
 			isa = PBXGroup;
 			children = (
 				0198B24119BC24EC000FD4C7 /* SyncDelegate.h */,
-				0198B23E19BC2180000FD4C7 /* CBLModel+DB.m */,
 				0198B23F19BC2180000FD4C7 /* CBLModel+DB.h */,
+				0198B23E19BC2180000FD4C7 /* CBLModel+DB.m */,
 				0198B23319BC1A41000FD4C7 /* DBManager.m */,
 				0198B23419BC1A41000FD4C7 /* DBManager.h */,
 				0139B38019E3ED5E00DBBCE1 /* Comment.h */,
@@ -330,7 +330,7 @@
 		0198B1D819BC056F000FD4C7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = Ajinosashimi;
 				TargetAttributes = {
 					0198B20619BC0570000FD4C7 = {
@@ -491,7 +491,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -524,7 +524,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
